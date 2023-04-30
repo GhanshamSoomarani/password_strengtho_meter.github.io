@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="style.css">
+         
+        <!----===== Iconscout CSS ===== -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+        <!--<title>Responsive Regisration Form </title>--> 
+    </head>
+    <body>
+        <div class="container">
+            <header>Registration</header>
+    
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">    
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>First Name</label>
+                                <input type="text" placeholder="Enter your firstname" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Enter your last name" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" placeholder="Enter birth date" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" placeholder="e.g. john@your-domain.com" id="email" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number"  pattern="[0-9]{10}" placeholder="e.g. +92XXXXXXXXXX" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select required>
+                                    <option disabled selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Password</label>
+                                <input type="password" placeholder="Enter your password" required>
+                            </div>
+    
+                            <div class="input-field">
+                                <label>Confirm password</label>
+                                <input type="password" placeholder="Confirm your password" required>
+                            </div>
+                                                        
+                            <div class="input-field">
+                                <label>Password Security Check</label>
+                                <a href="checkpass.html">Want to see how long it will take to crack your password?</a>
+                                
+                            </div>
+
+                            <div class="input-field">
+                                <label>Captcha</label>
+                                <div id="captcha-container">
+                                    <span id="captcha-text"></span>
+                                    <input type="text" id="captcha-input" placeholder="Type the code above">
+                                    <button id="captcha-btn">Submit</button>
+                                  </div>
+                            </div>
+                            
+                            
+                            <div>
+                                <label class="control control--checkbox mb-0">
+                                    <input type="checkbox" />
+                                    <span class="caption">Creating an account means you're okay with our <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.</span>  
+                                    <div class="control__indicator"></div>
+                            </div>
+                            
+                        </div>
+                            
+                        <button class="sumbit">
+                            <span class="btnText">Register</span>
+                            <i class="uil uil-navigator"></i>
+                            <a href="main.html">
+                        </button>
+
+                        </div>
+                    </div>
+    
+                   
+                </div>
+    
+                
+            </form>
+        </div>
+    <script>
+        // Generate a random string of numbers and letters
+        function generateCaptcha(length) {
+          let result = '';
+          const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          const charactersLength = characters.length;
+          for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+          }
+          return result;
+        }
+      
+        const captchaText = document.getElementById('captcha-text');
+        const captchaInput = document.getElementById('captcha-input');
+        const captchaBtn = document.getElementById('captcha-btn');
+      
+        // Initialize the captcha
+        let captcha = generateCaptcha(6);
+        captchaText.textContent = captcha;
+      
+        // Handle the submit button click event
+        captchaBtn.addEventListener('click', () => {
+          if (captchaInput.value === captcha) {
+            alert('Captcha passed!');
+          } else {
+            alert('Incorrect captcha, please try again.');
+            captcha = generateCaptcha(6);
+            captchaText.textContent = captcha;
+            captchaInput.value = '';
+          }
+        });
+      
+        // Prevent copying and pasting in the captcha field
+        captchaInput.addEventListener('copy', (event) => {
+          event.preventDefault();
+          return false;
+        });
+      
+        captchaInput.addEventListener('paste', (event) => {
+          event.preventDefault();
+          return false;
+        });
+    </script>
+        <script src="script.js"></script>
+    
+</body>
+</html>
