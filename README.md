@@ -11,27 +11,30 @@ Try it out here:
 
 Below are visual examples of how different passwords are evaluated by the strengthometer:
 
-### 🔴 Very Weak Password (e.g., `123`, `abc`)
-![Very Weak 1](images/very_weak_1.png)  
-![Very Weak 2](images/very_weak_2.png)
+### 🔴 Very Weak Password (e.g., `123`, `hello123`)
+![Very Weak 1](images/1.png)  
+![Very Weak 2](images/2.png)
 
-### 🟡 Weak Password (e.g., `hello123`, `password1`)
-![Weak](images/weak.png)
+### 🟠 Weak Password (e.g., `Gh@12`)
+![Weak](images/6.png)
 
-### 🟠 Medium Password (e.g., `Hello123`, `P@ssw0rd`)
-![Medium](images/medium.png)
+### 🟡 Medium Password (e.g., `Hello@18fd`)
+![Medium](images/3.png)
 
-### 🟢 Strong Password (e.g., `H@ll0!_Secure#2024`)
-![Strong](images/strong.png)
+### 🟢 Strong Password (e.g., `H@ll0!_Secure#`)
+![Strong](images/5.png)
 
-> All strength levels are determined based on length, inclusion of lowercase, uppercase, numbers, and special characters.
+### 🟢 Very Strong Password (e.g., `H@ll0!_Secure#2024`)
+![Strong](images/7.png)
+
+> All strength levels are determined based on length, inclusion of lowercase, uppercase, numbers, special characters, male and female names and dictionary words .
 
 ## 🛠️ Features
 
 - Real-time password strength feedback
 - Customizable strength logic
-- Mobile-friendly interface
-- Easy to integrate into any project
+- Review about your password
+- Do not save your data
 
 ## 📂 Project Structure
 
