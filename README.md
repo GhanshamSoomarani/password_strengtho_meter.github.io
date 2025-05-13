@@ -1,7 +1,6 @@
-# 🔐 Password Strengthometer
+# 🔐 Password Strength-o-Meter
 
-A lightweight and intuitive tool to visualize the strength of a password based on complexity rules. The Password Strengthometer categorizes passwords into six levels: **Very Weak**, **Weak**, **Medium**, and **Strong**, providing visual feedback for better password practices.
-
+A simple, interactive web tool that visually indicates the strength of your password in real time. It helps users create more secure passwords by evaluating their strength using custom logic and provides color-coded feedback (Very Weak to Very Strong).
 ## 🚀 Live Demo
 
 Try it out here:  
@@ -31,10 +30,15 @@ Below are visual examples of how different passwords are evaluated by the streng
 
 ## 🛠️ Features
 
-- Real-time password strength feedback
-- Customizable strength logic
-- Review about your password
-- Do not save your data
+- ✅ Real-time password strength feedback
 
-## 📂 Project Structure
+- ✅ Five levels of strength analysis
+
+- ✅ Color-coded visual indicators (🔴 🟠 🟡 🟢)
+
+- ✅ Lightweight and fast — no backend required
+
+- ✅ Privacy-focused — no password data is saved
+
+- ✅ Detects dictionary words and names
 
